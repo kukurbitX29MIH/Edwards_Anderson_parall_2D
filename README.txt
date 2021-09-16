@@ -185,7 +185,7 @@ Numeration way of outer frame spins is given below
 
 
 Program generates at the end of its work the file with same structure as input. So one can take out file and use it as input in the next launch.
-Examples of the input files are given in the fold examples.
+Examples of the input files are given in the main directory.
 
 
 
