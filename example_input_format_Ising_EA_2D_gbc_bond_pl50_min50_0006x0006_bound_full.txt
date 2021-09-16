@@ -1,0 +1,218 @@
+#  Ly
+6
+#  Lx
+6
+#  J_plus_perc
+50
+#  J_min_perc
+50
+#  lattice and bond structure
+*--*--*--*--*--*
+|  |  |  |  |  |
+*--*--*--*--*--*
+|  |  |  |  |  |
+*--*--*--*--*--*
+|  |  |  |  |  |
+*--*--*--*--*--*
+|  |  |  |  |  |
+*--*--*--*--*--*
+|  |  |  |  |  |
+*--*--*--*--*--*
+#  min energy
+-52
+#  up row gs
+-1 +1 -1 -1 +1 -1
+#  down edge spin state
+-1 +1 -1 -1 +1 +1
+#  up edge spin state
+-1 -1 -1 -1 +1 -1
+#  left edge spin state
++1 -1 -1 -1 -1 -1
+#  right edge spin state
+-1 +1 +1 -1 -1 +1
+#  down edge spin existing
++1 +1 +1 +1 +1 +1
+#  up edge spin existing
++1 +1 +1 +1 +1 +1
+#  left edge spin existing
++1 +1 +1 +1 +1 +1
+#  right edge spin existing
++1 +1 +1 +1 +1 +1
+#  down edge J_ver
++1 +1 -1 +1 -1 +1
+#  up edge J_ver
+-1 +1 -1 +1 -1 -1
+#  left edge J_hor
++1 +1 +1 -1 +1 -1
+#  right edge J_hor
++1 -1 -1 +1 +1 +1
+#  J table
+#  s1_index_y	s1_index_x	s2_index_y	s2_index_x	bond_mean
+0		0		1		0		+1
+0		1		1		1		-1
+0		2		1		2		-1
+0		3		1		3		-1
+0		4		1		4		-1
+0		5		1		5		-1
+1		0		2		0		-1
+1		1		2		1		-1
+1		2		2		2		+1
+1		3		2		3		-1
+1		4		2		4		-1
+1		5		2		5		+1
+2		0		3		0		+1
+2		1		3		1		+1
+2		2		3		2		-1
+2		3		3		3		+1
+2		4		3		4		+1
+2		5		3		5		-1
+3		0		4		0		-1
+3		1		4		1		+1
+3		2		4		2		+1
+3		3		4		3		-1
+3		4		4		4		-1
+3		5		4		5		+1
+4		0		5		0		-1
+4		1		5		1		+1
+4		2		5		2		+1
+4		3		5		3		-1
+4		4		5		4		-1
+4		5		5		5		-1
+0		0		0		1		+1
+0		1		0		2		-1
+0		2		0		3		-1
+0		3		0		4		+1
+0		4		0		5		+1
+1		0		1		1		-1
+1		1		1		2		-1
+1		2		1		3		-1
+1		3		1		4		-1
+1		4		1		5		+1
+2		0		2		1		+1
+2		1		2		2		-1
+2		2		2		3		+1
+2		3		2		4		+1
+2		4		2		5		+1
+3		0		3		1		-1
+3		1		3		2		+1
+3		2		3		3		-1
+3		3		3		4		-1
+3		4		3		5		-1
+4		0		4		1		+1
+4		1		4		2		-1
+4		2		4		3		+1
+4		3		4		4		+1
+4		4		4		5		+1
+5		0		5		1		+1
+5		1		5		2		-1
+5		2		5		3		-1
+5		3		5		4		+1
+5		4		5		5		+1
+5		0		6		0		-1
+5		1		6		1		+1
+5		2		6		2		-1
+5		3		6		3		+1
+5		4		6		4		-1
+5		5		6		5		-1
+
+=============================================================== start =============================================================== 
+
+
+
+===============  ---------------------------    izing_2D_exact_gbc_EAnd_v54_minE_sr_mult_thrd_parallel   is launched    ------------------------   ============
+===============  --------------------------          ================================================================   ------------------------   ============
+
+boundary conditions: given edges (d, u, l, r)
+Ly=6, Lx=6
+posit_bond_perc=50, negat_bond_perc=50
+amount of threads = 4
+amount_of_states_per_thrd = 16
+using memory per one thread for storing energy array: 0 Gb + 0 Mb + 0 kb + 9 b
+using memory for all for storing of matrices is about: 0 Gb + 0 Mb + 0 kb + 36 b
+
+matrix struct:
+-------------------------------------------------------------------
+|                                                                 |
+|            d       d       d       d       u       d            |
+|                                                                 |
+|            -       +       -       +       -       -            |
+|                                                                 |
+|    d   -   S   +   S   -   S   -   S   +   S   +   S   +   u    |
+|                                                                 |
+|            -       +       +       -       -       -            |
+|                                                                 |
+|    d   +   S   +   S   -   S   +   S   +   S   +   S   +   d    |
+|                                                                 |
+|            -       +       +       -       -       +            |
+|                                                                 |
+|    d   -   S   -   S   +   S   -   S   -   S   -   S   +   d    |
+|                                                                 |
+|            +       +       -       +       +       -            |
+|                                                                 |
+|    d   +   S   +   S   -   S   +   S   +   S   +   S   -   u    |
+|                                                                 |
+|            -       -       +       -       -       +            |
+|                                                                 |
+|    d   +   S   -   S   -   S   -   S   -   S   +   S   -   u    |
+|                                                                 |
+|            +       -       -       -       -       -            |
+|                                                                 |
+|    u   +   S   +   S   -   S   -   S   +   S   +   S   +   d    |
+|                                                                 |
+|            +       +       -       +       -       +            |
+|                                                                 |
+|            d       u       d       d       u       u            |
+|                                                                 |
+-------------------------------------------------------------------
+
+progress = 17 % 
+progress = 20 % 
+progress = 22 % 
+progress = 25 % 
+progress = 28 % 
+progress = 31 % 
+progress = 34 % 
+progress = 37 % 
+progress = 40 % 
+progress = 42 % 
+progress = 45 % 
+progress = 48 % 
+progress = 51 % 
+progress = 54 % 
+progress = 57 % 
+progress = 60 % 
+progress = 62 % 
+progress = 65 % 
+progress = 68 % 
+progress = 71 % 
+progress = 74 % 
+progress = 77 % 
+progress = 80 % 
+progress = 82 % 
+progress = 85 % 
+progress = 88 % 
+progress = 91 % 
+progress = 94 % 
+progress = 97 % 
+progress = 100 % 
+
+program is completed   for lattice 6x6
+result_min_E=-52   result_min_E_pospair=16  amount_of_null_edge_bonds=0      
+  up_row_gs_state:
+-1 +1 -1 -1 +1 -1 
+
+
+
+===============  ---------------------------    izing_2D_exact_gbc_EAnd_v54_minE_sr_mult_thrd_parallel   is launched    ------------------------   ============
+===============  --------------------------          ==================================================================   ------------------------   ============
+
+............................................................
+calculation is completed successfully
+min_E=-52
+
+............................................................
+work took:  0 days  0 h  0 m  0 s  1 ms
+
+=============================================================== end =============================================================== 
+
+
